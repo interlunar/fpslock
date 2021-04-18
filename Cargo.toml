@@ -1,0 +1,28 @@
+[package]
+name = "fps_lock"
+version = "1.0.0"
+authors = [""]
+description = "A crate for making your game loop run at the correct FPS"
+readme = "README.md"
+keywords = ["fps", "frames-per-second", "game", "clock"]
+
+
+[features]
+window = ["winit"]
+
+[dependencies]
+winit = { version = "0.24", optional = true }
+
+[[example]]
+name = "using_a_window"
+required-features = ["window"]
+
+
+
+[[example]]
+name = "counter"
+path = "examples/counter.rs"
+
+[[example]]
+name = "limiter"
+path = "examples/limiter.rs"
